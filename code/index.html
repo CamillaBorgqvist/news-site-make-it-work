@@ -2,22 +2,96 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <!-- Change the title below -->
-    <title>News Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MakeitWork</title>
     <link rel="stylesheet" href="./style.css" />
-    <!-- dont forget the meta tag for responsiveness -->
   </head>
   <body>
-    <header>
-      <!-- Some kind of logo and navbar -->
+    <header class="header">
+       <div class="rubrik">
+        <h1>MakeitWork</h1>
+       </div>
+       <nav class="navbar">
+        <a href="#latest">Latest</a>
+        <a href="#news">News</a>
+        <a href="#werecommend">We recommend</a>
+        <a href="#contact">Contact</a>
+       </nav>
     </header>
-
-    <section class="big-news">
-      <!-- The big news content -->
+    <main>
+    <section class="about"> 
+      <h2>Everything on one site</h2>
+      <p>We know how hard it can be to navigate through the workout jungle. <br> Here we have gathered out favorite news and sites to make it easy for you.</p>
     </section>
-
-    <section class="">
-      <!-- The other news  -->
+    <section class="latest" id="latest">
+      <img src="assets/dumbells.jpg" alt="Dumbells">
+      <div class="latest-content">
+        <h2>Effects of heavy weight lifting</h3>
+        <p>Heavy weight lifting has been proven to be the most efficiant way to gain muscles and reduce fat mass. <br> <br> Muscle burns more calories at rest than fat. More muscle = higher resting metabolic rate. It stimulates bone growth, reducing the risk of osteoporosis as you age. Boosts testosterone, growth hormone, and IGF-1 levels, which are all linked to muscle growth, fat burning, and better recovery. </p>
+      </div>
     </section>
+    <div class="grid-header" id="news">
+      <h1>Find news and your workout</h1>
+    </div>
+    <section class="grid-container">
+      <div class="grid-article">
+        <img src="assets/backlift.jpg" alt="Backlift">
+        <a class="grid-links" target="_blank" href="https://iform.se/search?s=rygglyft">The ultimate back life guide</a>
+      </div>
+      <div class="grid-article">
+        <img src="assets/box.jpg" alt="Boxing">
+        <a class="grid-links" target="_blank" href="https://www.fightbox.se/">Find your inner power with Boxing</a>
+      </div>
+      <div class="grid-article">
+        <img src="assets/dumbells.jpg" alt="Dumbells">
+        <a class="grid-links" target="_blank" href="https://iform.se/traning/styrketraning/valj-ratt-hantlar-satsa-pa-gamla-goda-modeller">Guide to find the right weight</a>
+      </div>
+      <div class="grid-article">
+        <img src="assets/sideplank.jpg" alt="Sideplank">
+        <a class="grid-links" target="_blank" href="https://iform.se/search?s=planka">One plank, two plank, thee...</a>
+      </div>
+      <div class="grid-article">
+        <img src="assets/jump.jpg" alt="Beachjump">
+        <a class="grid-links" target="_blank" href="https://www.garagegymreviews.com/beach-workout">Don't just chill on the beach</a>
+      </div>
+      <div class="grid-article">
+        <img src="assets/situp.jpg" alt="Situp">
+        <a class="grid-links" target="_blank" href="https://www.strengthlog.com/core-exercises/">Your Core is the core to your strength</a>
+      </div>
+      <div class="grid-article">
+        <img src="assets/yoga.jpg" alt="Yoga pose">
+        <a class="grid-links" target="_blank" href="https://yogadevi.se/">Find your breath with Yoga</a>
+      </div>
+      <div class="grid-article">
+        <img src="assets/yoga2.jpg" alt="Yoga pose">
+        <a class="grid-links" target="_blank" href="https://www.svenskhalsokost.se/yoga-for-nyborjare?utm_id=bing_579594658&msclkid=8d7be0c5fa8b1ecc130b872a59586eaa&utm_source=bing&utm_medium=cpc&utm_campaign=HWSE%20Search%20DSA%20(Bing)&utm_term=ARTICLE_PAGE&utm_content=DSA%20Page%20Feed%20URLs">Yoga for beginners</a>
+      </div>
+      <div class="grid-header" id="werecommend">
+        <h1>We recommend</h1>
+      </div>
+      <div class="grid-article">
+        <img src="assets/asana.jpg" alt="Woman pose">
+        <a class="grid-links" target="_blank" href="https://asanarebel.com/en/">Asana Rebel</a>
+      </div>
+      <div class="grid-article">
+        <img src="assets/kettlebell.jpg" alt="Kettlebell">
+        <a class="grid-links" target="_blank" href="https://www.boostsweden.se/"> Boost Sweden</a>
+      </div>
+      <div class="grid-article">
+        <img src="assets/cycle.jpg" alt="Spinning cycle">
+        <a class="grid-links" target="_blank" href="https://www.becore.se/workout/beatcycle/">BeatCycle</a>
+      </div>
+    </section>
+    </main>
+    <footer>
+      <div class="footer" id="contact"> 
+        <p>MakeitWork</p>
+      <nav class="contact">
+        <a target="_blank" href="mailto:camilla.borgqvist@hotmail.com">Contact</a>
+        <a target="_blank" href="https://www.linkedin.com/in/camilla-borgqvist-99270b52/">Linkedin</a>
+      </nav>
+      </div>
+        </footer>
   </body>
 </html>

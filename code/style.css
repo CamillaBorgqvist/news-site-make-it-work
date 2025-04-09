@@ -1,4 +1,216 @@
-html {
-  background: #0025ff;
-  color: #fff;
+.body{
+  background: white;
+}
+.header{
+  position:sticky; /*so the header keeps on showing when scrolling*/
+  height: 100%;
+  top: 0;
+  z-index: 1000; /* ontop of all content */
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+}
+.navbar{
+  display:flex;
+  flex-direction: column;
+  gap: 5px; 
+}
+.navbar a{
+  text-decoration: none;
+  color: #755347;
+  font-family: Calibri;
+  font-size: 20px;
+}
+  .navbar a:hover{
+    background-color: rgb(247, 247, 247);
+}
+  h1{
+    color: #755347;
+    font-size: 50px;
+    font-family: Calibri;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+@media (min-width: 683px){ /*raised the px so lika We recommend dont get on two rows*/
+  .navbar{
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+  }
+  .navbar a{
+    font-size: 30px;
+  }
+  .rubrik{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .rubrik h1{
+    font-size: 70px;
+  }
+}
+/*to avoid that the beginning of the section I link to from the navbar don't get under the header do to position sticky */
+#latest, #news, #werecommend, #contact {
+  scroll-margin-top: 200px; /* adjusted to look good in all media query*/
+}
+.about {
+  position: relative;
+  height: 170px;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  margin:20px 0px 30px;
+  flex-direction: column;
+}
+.about::before { /*to change the backgroud img opacity*/
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url(assets/section\ background.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  z-index: -1; /* Img behind content*/
+}
+.about h2{
+  font-size: 30px;
+  font-family: Calibri; 
+}
+.about p{
+  font-size: 20px;
+  font-family: Calibri;
+  margin-top:0;
+}
+.latest {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin-bottom: 30px;
+}  
+.latest h2{
+  color: #755347;
+  font-family: Calibri;
+  font-size: 40px;
+}
+.latest p{
+  color: #755347;
+  margin-top:0;
+}
+.latest img { /*the img will not show on mobile*/
+  display:none;
+}
+.latest-content {
+  max-width: 500px;
+}
+@media (min-width: 668px) {
+  .latest {
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+  }
+  .latest img { /*shows the img in teblet/desktop*/
+    display:block; 
+    width: 20%;
+    height: 20%;
+    border-radius: 10px;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+  }
+  .latest:hover img{
+    opacity:1;
+  }
+}
+.grid-container{
+  display:grid;
+  grid-template-columns: 1fr;
+  column-gap: 15px;
+  row-gap: 15px;
+  text-align: center;
+  margin-bottom: 0;
+}
+.grid-article img{
+  width: 70%;
+  height:70%;
+  object-fit: cover;
+  opacity: 0.4;
+  transition: opacity 0.3s ease; /*makes the transition softer when hover*/
+}
+.grid-article:hover img { /*change the opacity when hover over the element*/
+  opacity: 0.8;
+}
+@media (min-width:667px) and (max-width:1024px){
+  .grid-container{
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  .grid-article img{
+    width: 70%;
+    height:70%;
+  }
+}
+@media (min-width:1025px){
+  .grid-container{
+    grid-template-columns: repeat(4, 1fr); 
+  }
+  .grid-article img{
+    width: 70%;
+    height:70%;
+  }
+}
+.grid-header{
+  display:flex;
+  justify-content: center;
+}
+.grid-header h1{
+  font-size: 50px;
+}
+.grid-article{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgb(247, 247, 247);
+}
+.grid-links{
+  text-decoration: none;
+  color: #755347;
+  font-family: Calibri;
+  font-size: 25px;
+}
+.grid-article a{
+  display:block;
+  font-size: 20px;
+}
+.grid-article a:hover{
+  font-weight: bold;
+}
+.footer{
+  text-align: center;
+  background: rgba(226,205,205, 0.5);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  margin-bottom: 10px;
+}
+.footer p{
+  color: #755347;
+  font-family: Calibri;
+  font-size: 30px;
+  padding-top: 20px;
+  margin-bottom: 10px;
+}
+.footer a{
+  text-decoration: none;
+  color: white;
+  font-family: Calibri;
+  font-size: 20px;
+  padding-bottom: 20px;
+  padding: 5px;
+}
+.footer a:hover{
+  font-weight: bold;
 }
